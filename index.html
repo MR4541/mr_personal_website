@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR的小小天地 | 首頁</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--設置IE兼容-->
+    <meta name="description" content="包含了各種有關MR的資訊以及他的作品"> <!--搜尋網頁時標題底下的說明文字-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> <!--引入jQuery函式庫-->
+    <link rel="stylesheet" href="./style/index.css"> <!--css用哪個檔案-->
+    <script type="text/javascript" src="./scripts/index.js"> </script> <!--js用哪個檔案-->
+</head>
+
+<!--
+    四色
+    #f2f2fa     極淡灰
+    #DBE2EF     淡灰藍
+    #3F72AF     深藍
+    #112D4E     最深藍
+
+    這個網頁的HACKMD大綱 https://hackmd.io/k30qNbF8Qcq3DuPitnKhNQ
+-->
+
+<body style="background-color: #f2f2fa">
+    <!--個人資料相片-->
+    <a href="index.html" id="a_profile">
+        <span id="profile_name">
+            <img src="./assets/images/Yuuki_padoru_full.png" id="profile_picture" alt="個人資料相片">MR的小小天地</span></a> <!--點頭像可以回到首頁-->
+
+    <!--選單-->
+    <ul class="drop_down_menu"> <!--下拉式選單-->
+        <li onclick="location.href='./html/news.html';"><a href="./html/news.html">最新消息</a></li> <!--這邊的相對路徑記得注意-->
+        <li onclick="location.href='./html/history.html';"><a href="./html/history.html">歷史紀錄</a></li> <!--onclick讓整個li都變成超連結-->
+        <li onclick="location.href='./html/tools.html';"><a href="./html/tools.html">實用工具</a>
+            <ul> <!--用event.stopPropagation()防止DOM樹傳播訊息，最後導致載入外層(即上一層li)的連結-->
+                <li onclick="event.stopPropagation(); location.href='./html/tools.html';"><a href="./html/tools.html">總覽</a></li>
+                <li onclick="event.stopPropagation(); location.href='./html/calculator.html';"><a href="./html/calculator.html">計算機</a></li>
+                <li onclick="event.stopPropagation(); location.href='./html/timer.html';"><a href="./html/timer.html">倒數計時器</a></li>
+                <li onclick="event.stopPropagation(); location.href='./html/drawlots.html';"><a href="./html/drawlots.html">隨機抽籤</a></li>
+            </ul>
+        </li>
+        <li onclick="location.href='./html/collection.html';"><a href="./html/collection.html">其他作品</a></li>
+    </ul>
+
+    <!--個人圖片展區-->
+    <div class="div_main_img"> 
+        <a href="#"><img src="./assets/images/main_img_1.png" alt="個人圖片展示"></a> <!--"#"類似於空網址-->
+        <a href="#"><img src="./assets/images/main_img_2.png" alt="個人圖片展示"></a>
+        <a href="#"><img src="./assets/images/main_img_3.png" alt="個人圖片展示"></a>
+        <a href="#"><img src="./assets/images/main_img_4.png" alt="個人圖片展示"></a>
+        <a href="#"><img src="./assets/images/main_img_5.png" alt="個人圖片展示"></a>
+        <a href="#"><img src="./assets/images/main_img_6.png" alt="個人圖片展示"></a>
+        <a href="#"><img src="./assets/images/main_img_7.png" alt="個人圖片展示"></a>
+    </div>
+
+    <!--內文區-->
+    <div class="div_text">
+        <p class="text" style="font-size: 5vw;font-weight: bold;font-family: sans-serif;">哈囉！我是MR，歡迎來到我的網站！</p> <!--已附帶換行效果-->
+        <p class="text">這個網頁會放我寫的網頁小工具以及我畫過的畫等，歡迎有興趣的人來多多認識我喔！</p>
+        <p class="text">可以點擊螢幕上方的選單來看我的作品，下方則有我的社群網站連結～</p>
+    </div>
+
+    <br>
+
+    <!--社群網站連結-->
+    <div class="div_text" style="display: inline-flex;">
+        <a href="https://www.facebook.com/joy.chuang.1422" target="_blank" class="social_media_text"> <!--target="_blank"會在新分頁開啟連結-->
+            <img src="./assets/images/FB_logo.jpg" class="social_media" alt="FBlogo"></a>
+        <a href="https://www.facebook.com/joy.chuang.1422" target="_blank" class="social_media_text">Joy Chuang</a>
+    </div>
+    <div class="div_text" style="display: inline-flex;">
+        <a href="https://www.facebook.com/joy.chuang.1422" target="_blank"class="social_media_text">
+            <img src="./assets/images/IG_logo.png" class="social_media" alt="IGlogo"></a>
+        <a href="https://www.instagram.com/m.r_canunz1p/" target="_blank" class="social_media_text">m.r_canunz1p</a>
+    </div>
+
+    <br><br><br><br><br>
+
+    <div class="div_text">
+        <p class="text" style="font-size: 4vw;font-weight: bold;font-family: sans-serif;">回饋區～～</p> <!--已附帶換行效果-->
+    </div>
+
+    <!--回饋表單-->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexw4rxoEx5uupvVFysE6Djx--Hf8cWNbUcv3FY0TK6CTqIvQ/viewform?embedded=true"
+     width="640" height="600" frameborder="0" style="display: block; margin: auto;">載入中…</iframe>
+
+    <!--造訪人數計算機-->
+    <div class="counter" style="text-align: end; margin-top: 40vh; margin-bottom: 2vh;">
+        People Visited :
+        <a href="https://www.stylemap.co.jp/">
+            <img src="https://www.f-counter.net/j/63/1706864352/" alt="カウンターカフェ" style="height: 1.5vw;"></a>
+    </div>
+
+    <footer style="background-color: #112D4E; text-align: center; padding: 3vh 0 3vh;">
+        <p style="font-size: 3vh; color: #F9F7F7;">Copyright © 2024 MR. All rights reserved.</p>
+    </footer>
+
+    <!--    <div style="height: 9999px; display: flex; justify-content: center; font-size: 10vw;" >以下是用來佔位子的</div>    -->
+</body>
+</html>

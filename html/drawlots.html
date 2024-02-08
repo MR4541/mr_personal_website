@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR | 實用工具——隨機抽籤</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--設置IE兼容-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> <!--引入jQuery函式庫-->
+    <link rel="stylesheet" href="../style/drawlots.css"> <!--css用哪個檔案-->
+    <script type="text/javascript" src="../scripts/drawlots.js"></script> <!--js用哪個檔案-->
+</head>
+<!--
+    四色
+    #f2f2fa     極淡灰
+    #DBE2EF     淡灰藍
+    #3F72AF     深藍
+    #112D4E     最深藍
+
+    這個網頁的HACKMD大綱 https://hackmd.io/k30qNbF8Qcq3DuPitnKhNQ
+-->
+
+<body style="background-color: #f2f2fa">
+    <!--個人資料相片-->
+    <a href="../index.html" id="a_profile_smaller">
+        <span id="profile_name_smaller">
+            <img src="../assets/images/Yuuki_padoru_full.png" id="profile_picture_smaller" alt="個人資料相片">MR的小小天地</span></a> <!--點頭像可以回到首頁-->
+
+    <!--選單-->
+    <ul class="drop_down_menu"> <!--下拉式選單-->
+        <li onclick="location.href='./news.html';"><a href="./news.html">最新消息</a></li> <!--這邊的相對路徑記得注意-->
+        <li onclick="location.href='./history.html';"><a href="./history.html">歷史紀錄</a></li> <!--onclick讓整個li都變成超連結-->
+        <li onclick="location.href='./tools.html';"><a href="./tools.html">實用工具</a>
+            <ul> <!--用event.stopPropagation()防止DOM樹傳播訊息，最後導致載入外層(即上一層li)的連結-->
+                <li onclick="event.stopPropagation(); location.href='./tools.html';"><a href="./tools.html">總覽</a></li>
+                <li onclick="event.stopPropagation(); location.href='./calculator.html';"><a href="./calculator.html">計算機</a></li>
+                <li onclick="event.stopPropagation(); location.href='./timer.html';"><a href="./timer.html">倒數計時器</a></li>
+                <li onclick="event.stopPropagation(); location.href='./drawlots.html';"><a href="./drawlots.html">隨機抽籤</a></li>
+            </ul>
+        </li>
+        <li onclick="location.href='./collection.html';"><a href="./collection.html">其他作品</a></li>
+    </ul>
+
+<!--到這邊都可以複製-->
+
+    <div style="text-align: center; padding: 5vh 0; font-size: 8vh; font-weight: bold;margin-bottom: 10vh;">實用工具——隨機抽籤</div>
+
+    <div class="div_input"><span>從：</span><input id="from"        type="number" placeholder="開始號碼"></div>
+    <div class="div_input"><span>到：</span><input id="to"          type="number" placeholder="結束號碼"></div>
+    <div class="div_input"><span>抽出組數：</span><input id="count" type="number" placeholder="例如：5"></div>
+    <div class="div_input"><input type="checkbox" value="" id="repeat"><label for="repeat">抽出號碼可重複</label></div> <!--label for="欲連結checkbox的id"-->
+
+    <div id="start">開始抽籤！</div>
+
+    <div id="div_result">
+        <div style="text-align: center; background-color: #DBE2EF; border-radius: 1vw; margin-bottom: 2vh; padding: 2vh 0;">抽籤結果（順序為左到右）</div>
+        <div id="result"> <!--用js來新增/清空子元素的div-->
+        </div>
+    </div>
+
+    <div style="padding: 0 25vw; margin-top: 40vh;">
+        <h1 style="font-size: 5vh; font-family: sans-serif;">使用說明與注意事項</h1>
+        <p style="font-size: 4vh; font-family: sans-serif;">
+            1.抽取範圍請輸入整數；抽取組數請輸入正整數。<br>
+            2.抽取組數在10000組以下時較不會出現卡頓現象，想搞事的請斟酌參考。
+        </p>
+    </div>
+
+<!--以下可直接複製貼上-->
+
+    <!--造訪人數計算機-->
+    <div class="counter" style="text-align: end; margin-top: 40vh; margin-bottom: 2vh;">
+        People Visited :
+        <a href="https://www.stylemap.co.jp/">
+            <img src="https://www.f-counter.net/j/63/1706864352/" alt="カウンターカフェ" style="height: 1.5vw;"></a>
+    </div>
+
+    <footer style="background-color: #112D4E; text-align: center; padding: 3vh 0 3vh;">
+        <p style="font-size: 3vh; color: #F9F7F7;">Copyright © 2024 MR. All rights reserved.</p>
+    </footer>
+</body>
+</html>

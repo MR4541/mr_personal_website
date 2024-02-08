@@ -1,0 +1,1 @@
+//collection.html並沒有需要用到js的地方

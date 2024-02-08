@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR | 其他作品</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--設置IE兼容-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> <!--引入jQuery函式庫-->
+    <link rel="stylesheet" href="../style/collection.css"> <!--css用哪個檔案-->
+    <script type="text/javascript" src="../scripts/collection.js"></script> <!--js用哪個檔案-->
+</head>
+<!--
+    四色
+    #f2f2fa     極淡灰
+    #DBE2EF     淡灰藍
+    #3F72AF     深藍
+    #112D4E     最深藍
+
+    這個網頁的HACKMD大綱 https://hackmd.io/k30qNbF8Qcq3DuPitnKhNQ
+-->
+
+<body style="background-color: #f2f2fa">
+    <!--個人資料相片-->
+    <a href="../index.html" id="a_profile_smaller">
+        <span id="profile_name_smaller">
+            <img src="../assets/images/Yuuki_padoru_full.png" id="profile_picture_smaller" alt="個人資料相片">MR的小小天地</span></a> <!--點頭像可以回到首頁-->
+
+    <!--選單-->
+    <ul class="drop_down_menu"> <!--下拉式選單-->
+        <li onclick="location.href='./news.html';"><a href="./news.html">最新消息</a></li> <!--這邊的相對路徑記得注意-->
+        <li onclick="location.href='./history.html';"><a href="./history.html">歷史紀錄</a></li> <!--onclick讓整個li都變成超連結-->
+        <li onclick="location.href='./tools.html';"><a href="./tools.html">實用工具</a>
+            <ul> <!--用event.stopPropagation()防止DOM樹傳播訊息，最後導致載入外層(即上一層li)的連結-->
+                <li onclick="event.stopPropagation(); location.href='./tools.html';"><a href="./tools.html">總覽</a></li>
+                <li onclick="event.stopPropagation(); location.href='./calculator.html';"><a href="./calculator.html">計算機</a></li>
+                <li onclick="event.stopPropagation(); location.href='./timer.html';"><a href="./timer.html">倒數計時器</a></li>
+                <li onclick="event.stopPropagation(); location.href='./drawlots.html';"><a href="./drawlots.html">隨機抽籤</a></li>
+            </ul>
+        </li>
+        <li onclick="location.href='./collection.html';"><a href="./collection.html">其他作品</a></li>
+    </ul>
+    
+<!--到這邊都可以複製-->
+
+    <div style="text-align: center; padding: 5vh 0; font-size: 8vh; font-weight: bold;" id="back_to_title">其他作品</div>
+
+    <div class="shortcut">
+        <h1>繪畫</h1>
+        <a href="#colorpencil" class="shortcut_hover"> <!--記得用id="colorpencil"做錨點-->
+            <span style="font-size: 4vh;"><img src="../assets/images/rightarrow.png" style="height: 5vh; margin-right: 1vw;" alt="右箭頭">色鉛筆/鉛筆——人物</span>
+        </a>
+        <br>
+        <a href="#watercolor_people" class="shortcut_hover"> 
+            <span style="font-size: 4vh;"><img src="../assets/images/rightarrow.png" style="height: 5vh; margin-right: 1vw;" alt="右箭頭">水彩——人物</span>
+        </a>
+        <br>
+        <a href="#watercolor_other" class="shortcut_hover"> 
+            <span style="font-size: 4vh;"><img src="../assets/images/rightarrow.png" style="height: 5vh; margin-right: 1vw;" alt="右箭頭">水彩——其他</span>
+        </a>
+        <br>
+        <a href="#4K_painting" class="shortcut_hover"> 
+            <span style="font-size: 4vh;"><img src="../assets/images/rightarrow.png" style="height: 5vh; margin-right: 1vw;" alt="右箭頭">大張畫（四開）</span>
+        </a>
+        <br>
+        <a href="#digital_painting" class="shortcut_hover"> 
+            <span style="font-size: 4vh;"><img src="../assets/images/rightarrow.png" style="height: 5vh; margin-right: 1vw;" alt="右箭頭">電繪</span>
+        </a>
+        <br>
+        <h1>程式設計</h1>
+        <a href="#webpage_useful_tool" class="shortcut_hover">
+            <span style="font-size: 4vh;"><img src="../assets/images/rightarrow.png" style="height: 5vh; margin-right: 1vw;" alt="右箭頭">網頁成發——工具大雜繪</span>
+        </a>
+    </div>
+
+    <div style="height: 40vh; font-size: 8vh; display: flex; align-items: center; width: 98vw; justify-content: center; font-family: sans-serif;">▼Let's Goooooooo!▼</div>
+
+    <article>
+        <h1 id="colorpencil">色鉛筆/鉛筆——人物</h1>
+            <p>我從國中開始自己嘗試畫人物，媒材是選擇比較好處理的鉛筆和色鉛筆，雖然我有上美術課，但我在課堂上只有練習水彩和基本的素描技巧，所以這方面的能力完全是自己發展的，圖片的排序由近到遠。</p>
+            <img src="../assets/images/colorpencil_8.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>採用部分上色的方式來強調臉、頭跟火焰。
+                <a href="https://tos.fandom.com/zh/wiki/%E6%BC%8F%E7%91%9A?variant=zh-tw" target="_blank">圖源</a>
+            </p>
+            <img src="../assets/images/colorpencil_7.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>這是我首次嘗試「非仿畫」的作品，融合了星爆的動作、有紀的角色設計還有表情，而我對於此次的創作也是相當滿意<(▰˘◡˘▰)>。也因為這張不是仿畫，所以這也是我少數有簽名的圖。</p>
+            <img src="../assets/images/colorpencil_6.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>為了讓畫主圖時更快進入狀態，我最近會在主圖之前先畫一張比較簡單的圖來熱身，而這就是其中一張作品。圖源：貓咪大戰爭。</p>
+            <img src="../assets/images/colorpencil_5.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>主要在色鉛筆的處理方面相當有料。
+                <a href="https://i.imgur.com/AeFG1NJ.jpg" target="_blank">圖源</a>
+            </p>
+            <img src="../assets/images/colorpencil_4.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>在畫本張圖之前，我根本沒在打草稿，但是一次畫兩個角色的時候顯然不能這樣搞，所以我第一次有認真打草稿，之後也慢慢養成這個好習慣，以結果來說，我覺得草稿打完的效果是蠻不錯的。
+                <a href="https://comic-top.com/viewer/?cid=50736&ct=so-do-a-to-onrain-kisu-ando-furai-chapter-sisters-prayer-6-1&t=1678892637" target="_blank">圖源</a>
+            </p>
+            <img src="../assets/images/colorpencil_3.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>我少數用色鉛筆有畫背景的圖，不過...我覺得加了背景反而讓畫面有點亂了...
+                <a href="https://pin.it/233dAeq" target="_blank">圖源</a>
+            </p>
+            <img src="../assets/images/colorpencil_2.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>老實說這張圖我畫了兩次，這是第一次，第二次是用水彩（下面有），這是2021年畫的，算是我相當早期的作品了～
+                <a href="http://dengekionline.com/elem/000/000/936/936133/sao2_02_cs1w1_x720.jpg" target="_blank">圖源</a>
+            </p>
+            <img src="../assets/images/colorpencil_1.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>目前有放上來的色鉛筆作品中最早的，可以看得出來我剛開始練習畫時下筆都非常的小力。圖源：刀劍神域動漫內截圖。</p>
+        <div class="div_return"><a href="#back_to_title" class="return">▲回到頁首▲</a></div>
+        <h1 id="watercolor_people">水彩——人物</h1>
+            <p>此項目目前只有兩張圖，不過我正在畫新的了，大概年中會完成（希望）。</p>
+            <img src="../assets/images/watercolor_people_2.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>沒錯，這跟上上一張是相同的圖喔～，是為了2022年的有紀生日畫的。看得出來臉有一點崩，不過衣著的光影跟背景我都處理得蠻滿意的，也呈現出了和原圖不太相同的風格。
+                <a href="http://dengekionline.com/elem/000/000/936/936133/sao2_02_cs1w1_x720.jpg" target="_blank">圖源</a>
+            </p>
+            <img src="../assets/images/watercolor_people_1.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>首次嘗試用水彩畫人物，也因為比較大張需要從骨架開始打草稿，算是一次不錯的嘗試；至於右下角的字...我記得那是某款刀劍遊戲的卡面名稱，我就挪來用了。
+                <a href="https://m.gamer.com.tw/forum/treasure.php?bsn=1647&sn=14834&isa=1" target="_blank">圖源</a>
+            </p>
+        <div class="div_return"><a href="#back_to_title" class="return">▲回到頁首▲</a></div>
+        <h1 id="watercolor_other">水彩——其他</h1>
+            <p>有在美術班學的部分，描繪的對象依序是幾何模型→水果→蔬菜→盆栽→玻璃→玻璃盆栽→大盆栽＋少數小盆栽→大張作品（四開），為了清楚地展現歷程，這部分的圖我會由舊到新。</p>
+            <img src="../assets/images/watercolor_other_1.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>就是一根香蕉。我剛開始練習的時候美術老師會建議我把影子加上漸層，並且不要只使用黑色系，後來我也保持著這個方法，可以增加畫面的豐富度。</p>
+            <img src="../assets/images/watercolor_other_2.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>如果有人看不出來的話，左邊是番茄。可以看到我早期畫水彩的時候很喜歡在畫面空白處加些奇奇怪怪的東西，甚至連程式碼都用上了...（好像是我當時有上國中的C語言課程）</p>
+            <img src="../assets/images/watercolor_other_3.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>直接跳過蔬菜和小盆栽，好欸。左上方是窗戶，沒記錯的話應該是我第一次畫玻璃。</p>
+            <img src="../assets/images/watercolor_other_4.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>仔細看可以看到，其實這張圖細部有一些斑駁的色塊沒有處理得很好(例如竹葉的部分)，但是整體看起來很有風格，因為很滿意這張，它直到現在都還是我手機的桌布～</p>
+            <img src="../assets/images/watercolor_other_5.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>這段時間的圖我都有加上手繪的「印」章（從塗鴉風進步了！），內容通常是植物種類、姓名、年份、季節等，一直到我開始畫四開畫後才結束（因為背景已經夠豐富，不想干擾畫面）。</p>
+            <img src="../assets/images/watercolor_other_6.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>開始畫大盆栽，或是好幾種植物組合的盆栽，光影也隨之變得更複雜了。至於下方的字...可能是想模仿小篆然後失敗了吧，而且說個笑話，我國小還有學過書法呢...</p>
+            <img src="../assets/images/watercolor_other_7.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>突然想不到要說什麼，總之這是仙人掌。</p>
+            <img src="../assets/images/watercolor_other_8.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>這是聖誕紅，原本是打算聖誕節畫完，但我實際上畫到隔年才完成：），這也是我進入四開的大張畫作前最後一幅作品。</p>
+        <div class="div_return"><a href="#back_to_title" class="return">▲回到頁首▲</a></div>
+        <h1 id="4K_painting">大張畫（四開）</h1>
+            <p>承上，我最近這一段時間（快一年了）的水彩都是畫四開大小，內容由許多元素組成，畫面也因此比之前的作品更加複雜，到目前為止共有三張作品，一樣按照順敘法排列圖片。</p>
+            <img src="../assets/images/4K_painting_1.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>這張是第一次嘗試，我對於其中鳥巢蕨的效果很滿意，不過有個小問題：我當時是先畫背景才畫植物，但上色時一直畫出界，導致邊界的顏色有點糊掉，後續的作品就把上色順序改回來了。</p>
+            <img src="../assets/images/4K_painting_2.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>比起上次，這次在木材質地、背景的處理上都有進步，畫面的物件擺放本身也比較整齊，不過那個紫色玻璃可能有點太鮮豔了。</p>
+            <img src="../assets/images/4K_painting_3.jpg" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>這張的宗教元素比重比之前更為增加，處理時的重心也偏重在非植物的物件上。</p>
+        <div class="div_return"><a href="#back_to_title" class="return">▲回到頁首▲</a></div>
+        <h1 id="digital_painting">電繪</h1>
+            <p>我學習電繪的契機是高二上的自主學習計畫，<s>而我也發現電繪有多耗時間</s>。和手繪不同的是，因為電繪的圖可以放大、回到上一步，總會讓我想把圖處理得盡可能完美，結果就是，花費時間常是手繪的三、四倍以上，舉例來說，雖然我自主學習計畫（一學期）中的四張作品都有如期完成，但那是動用了大量的課後和週末時間，基本上可說是爆肝後壓死線才完成的（不過作為回報，成品也都是相當精緻啦～）。喔對了，我的繪圖軟體是用MediBang Paint，觸控筆和螢幕直接用家裡的平板，也就是說，我半毛錢都沒花喔：）</p>
+            <img src="../assets/images/digital_painting_1.png" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>前期還在熟悉操作跟觸控筆的手感，因此從Q版人物開始。
+                <a href="https://buyway.hk/Item=Deka-Key-SAOII-Chain-Sinon-Ver-2" target="_blank">圖源</a>
+            </p>
+            <img src="../assets/images/digital_painting_2.png" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>別看這張圖不大，我可是花了20小時阿...（手繪同等級約需5小時），不過也多虧了電繪好處理漸層的特色，角色衣服的質感讓我非常滿意，<s>至於那個竹子就請忽略啦哈哈</s>。
+                <a href="https://image01.seesaawiki.jp/s/o/saoif-game-info/bab1a84def8903a4.jpeg" target="_blank">圖源</a>
+            </p>
+            <img src="../assets/images/digital_painting_3.png" style="width: 60vw;" class="picture" alt="個人畫作">
+            <p>圖太複雜了所以特別放大一點。我一開始是花了好幾個小時打完草稿，結果還沒存檔程式突然當掉，檔案就消失不見了，直接原地崩潰...後來因為時間不夠直接描圖，把重心放在上色。上色的過程中我大量使用模糊跟透明化，除了處理漸層之外也把背景的物件變的比較不搶眼，不然畫面會太雜亂，最後總計花了30小時（不含一開始被消失的草稿）。
+                <a href="https://tos.fandom.com/zh/wiki/%E6%9C%80%E5%88%9D%E7%9A%84%E4%BB%BF%E9%AD%82_%E2%80%A7_%E8%8E%89%E8%8E%89%E7%B5%B2?variant=zh-tw" target="_blank">圖源</a>
+            </p>
+            <img src="../assets/images/digital_painting_4.png" style="width: 40vw;" class="picture" alt="個人畫作">
+            <p>沒錯，這張就是網頁標題的頭像，因為藝術生活課太水，所以我直接開始畫自己想畫的東西：）至少我還是在做跟美術有關的事情嘛。角色的輪廓就是Padoru，但我在服裝設計上遇到了相當大的問題，主要是我沒什麼美感，就像你正在看的這個網頁一樣慘，幸好，在超級大佬<u>帳號波</u>的指點和討論下，成功設計出了一套可以合理又可以展現特色的服裝，在此致上對<u>帳號波</u>大佬萬分的感謝。🛐🛐🛐🛐🛐🛐🛐🛐🛐🛐🛐</p>
+        <div class="div_return"><a href="#back_to_title" class="return">▲回到頁首▲</a></div>        
+        <h1 id="webpage_useful_tool">網頁成發——工具大雜繪</h1>
+            <p>就是<a href="./history.html">歷史紀錄</a>頁面最早一條紀錄所述的小工具集錦，是當時網頁小社課的期末成發，不過因為沒有花太多時間製作，功能跟排版的部分看起來頗為原始，以下該頁面的各個連結跟簡介。</p>
+            <img src="../assets/images/webpage_useful_tool_1.png" style="width: 40vw;" class="picture" alt="小工具集錦截圖">
+            <p><a href="https://joy523821.github.io/website_presentation/" target="_blank">首頁</a>：有含超連結的div按鈕可以導向三個小工具，<s>還有酷炫變色標題喔喔</s>。</p>
+            <img src="../assets/images/webpage_useful_tool_2.png" style="width: 40vw;" class="picture" alt="小工具集錦截圖">
+            <p><a href="https://joy523821.github.io/website_presentation/timer.html" target="_blank">計時器</a>：<s>清爽的風格</s>～</p>
+            <img src="../assets/images/webpage_useful_tool_3.png" style="width: 40vw;" class="picture" alt="小工具集錦截圖">
+            <p><a href="https://joy523821.github.io/website_presentation/calculator.html" target="_blank">計算機</a>：<s>清爽的風格</s>～</p>
+            <img src="../assets/images/webpage_useful_tool_4.png" style="width: 40vw;" class="picture" alt="小工具集錦截圖">
+            <p><a href="https://joy523821.github.io/website_presentation/saying.html" target="_blank">我也不知道這叫什麼</a>：<s>總之這是CSS練習</s>～</p>
+        <div class="div_return"><a href="#back_to_title" class="return">▲回到頁首▲</a></div>
+    </article>
+
+<!--以下可直接複製貼上-->
+
+    <!--造訪人數計算機-->
+    <div class="counter" style="text-align: end; margin-top: 40vh; margin-bottom: 2vh;">
+        People Visited :
+        <a href="https://www.stylemap.co.jp/">
+            <img src="https://www.f-counter.net/j/63/1706864352/" alt="カウンターカフェ" style="height: 1.5vw;"></a>
+    </div>
+
+    <footer style="background-color: #112D4E; text-align: center; padding: 3vh 0 3vh;">
+        <p style="font-size: 3vh; color: #F9F7F7;">Copyright © 2024 MR. All rights reserved.</p>
+    </footer>
+</body>
+</html>

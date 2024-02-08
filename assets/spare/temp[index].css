@@ -1,0 +1,123 @@
+.under_construction:hover{ /*用來標記還沒做完的*/
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+/*
+上面複製貼上就行
+*/
+#profile_name{
+    background-color: #DBE2EF;
+    display: flex; /*下面兩行要在flex才能用*/
+    align-items: center; /*區塊內的「物件」上下置中*/
+    justify-content: center; /*區塊內的「物件」左右置中*/
+    font-size: 6vw; /*螢幕可視範圍的百分比*/
+    height: 10vw;
+    font-family:  sans-serif; /*設定字體*/
+    font-weight: bold; /*粗體*/
+}
+#a_profile{
+    text-decoration: none;
+    color: #112D4E;
+}
+#a_profile:hover, #a_profile:visited, #a_profile:link, #a_profile:active {
+    text-decoration: none;/*不管被點、滑鼠指到、造訪過...都不要讓超連結顯示底線*/
+    color: #112D4E;
+}
+#profile_picture{
+    width: 6.5vw;
+    margin-right: 1vw;
+    border: 3px #112D4E solid;
+    border-radius: 100%;
+}
+
+
+
+
+/*只會動到這裡（#menu）：開始*/
+ul{ /*取消原本<ul>的預設排版*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.drop_down_menu{
+    position: sticky; /*會卡在最上面*/
+    top:0; /*要告訴他要黏在哪裡*/
+    display: inline-block;/*讓元素排成一行*/
+    border: none;
+    font-size: 1.5vw;
+    width: 100%;
+    z-index: 999; /*圖層，越大越上層，防止被蓋過*/
+}
+.drop_down_menu>li{
+    position: relative;
+    white-space: nowrap; /*空格不換行*/
+    width: 25%;
+    background-color: #3F72AF;
+    text-align: center;
+    float: left;
+}
+.drop_down_menu>li:hover{
+    background-color: #1e4672;
+    font-weight: bold;
+}
+.drop_down_menu>li>a{
+    text-decoration: none;
+    color: white;
+    line-height: 3vw;
+}
+.drop_down_menu>li>ul>li{ /*第二層選單開始*/
+    background-color: #3F72AF;
+    text-align: center;
+    font-weight: 100; /*因為第一層滑入後會有粗體效果，不設定的話第二層會繼承到*/
+}
+.drop_down_menu>li>ul>li:hover{
+    background-color: #1e4672;
+    font-weight: bold;
+}
+.drop_down_menu>li>ul>li>a{
+    text-decoration: none;
+    color: white;
+    line-height: 1.5;
+}
+.drop_down_menu>li>ul{
+    display: none;
+}
+.drop_down_menu>li:hover>ul{
+    display: block;
+    position: absolute; /*使用absolute，下方的元素才不會被擠開*/
+    top: 3vw;
+    width: 100%;
+    z-index: 1000;
+}
+/*原本的*/
+#menu{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5vw;
+    height: 3vw;
+    background-color: #3F72AF;
+    color: white;
+    /*position: sticky; 會卡在最上面*/
+    top: 0; /*黏的位置*/
+    z-index: 999;
+}
+/*只會動到這裡：結束*/
+
+
+
+
+
+
+.counter{
+    font-size: 1.5vw;
+    margin-right: 4vw;
+    font-family: sans-serif;
+}
+footer{
+    background-color: #112D4E;
+    text-align: center;
+    padding: 3vh 0 3vh;
+}
