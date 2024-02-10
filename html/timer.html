@@ -42,7 +42,7 @@
 
 <!--到這邊都可以複製-->
 
-    <div style="text-align: center; padding: 5vh 0; font-size: 8vh; font-weight: bold;">實用工具——倒數計時器</div>
+    <div id="title">實用工具——倒數計時器</div>
     
     <div id="text">輸入時間</div> <!--倒數時會變成「剩餘時間」-->
 
@@ -62,9 +62,9 @@
         <div id="reset_cancel">重置</div> <!--倒數時會變成「取消」-->
     </div>
 
-    <div style="padding: 0 20vw; margin-top: 20vh;">
+    <div class="tools_div_text"> <!--因為RWD有改-->
         <h1 style="font-size: 5vh; font-family: sans-serif;">使用說明與注意事項</h1>
-        <p style="font-size: 4vh; font-family: sans-serif;">
+        <p id="rwd_tools_text"  style="font-size: 4vh; font-family: sans-serif;">
             1.本計時器最多可計99小時59分59秒。<br>
             2.可以用方框右側的箭頭調整時間，亦可以直接輸入。
         </p>
@@ -73,14 +73,15 @@
 <!--以下可直接複製貼上-->
 
     <!--造訪人數計算機-->
-    <div class="counter" style="text-align: end; margin-top: 40vh; margin-bottom: 2vh;">
+    <!--以下都複製（RWD）-->
+    <div class="counter">
         People Visited :
         <a href="https://www.stylemap.co.jp/">
-            <img src="https://www.f-counter.net/j/63/1706864352/" alt="カウンターカフェ" style="height: 1.5vw;"></a>
+            <img src="https://www.f-counter.net/j/63/1706864352/" alt="カウンターカフェ" id="counter_img"></a>
     </div>
 
     <footer style="background-color: #112D4E; text-align: center; padding: 3vh 0 3vh;">
-        <p style="font-size: 3vh; color: #F9F7F7;">Copyright © 2024 MR. All rights reserved.</p>
+        <p id="footer_text">Copyright © 2024 MR. All rights reserved.</p>
     </footer>
 </body>
 </html>

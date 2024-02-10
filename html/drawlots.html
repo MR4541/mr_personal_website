@@ -42,7 +42,7 @@
 
 <!--到這邊都可以複製-->
 
-    <div style="text-align: center; padding: 5vh 0; font-size: 8vh; font-weight: bold;margin-bottom: 10vh;">實用工具——隨機抽籤</div>
+    <div id="title">實用工具——隨機抽籤</div>
 
     <div class="div_input"><span>從：</span><input id="from"        type="number" placeholder="開始號碼"></div>
     <div class="div_input"><span>到：</span><input id="to"          type="number" placeholder="結束號碼"></div>
@@ -57,9 +57,9 @@
         </div>
     </div>
 
-    <div style="padding: 0 25vw; margin-top: 40vh;">
+    <div class="tools_div_text">
         <h1 style="font-size: 5vh; font-family: sans-serif;">使用說明與注意事項</h1>
-        <p style="font-size: 4vh; font-family: sans-serif;">
+        <p  id="rwd_tools_text" style="font-size: 4vh; font-family: sans-serif;">
             1.抽取範圍請輸入整數；抽取組數請輸入正整數。<br>
             2.抽取組數在10000組以下時較不會出現卡頓現象，想搞事的請斟酌參考。
         </p>
@@ -68,14 +68,15 @@
 <!--以下可直接複製貼上-->
 
     <!--造訪人數計算機-->
-    <div class="counter" style="text-align: end; margin-top: 40vh; margin-bottom: 2vh;">
+    <!--以下都複製（RWD）-->
+    <div class="counter">
         People Visited :
         <a href="https://www.stylemap.co.jp/">
-            <img src="https://www.f-counter.net/j/63/1706864352/" alt="カウンターカフェ" style="height: 1.5vw;"></a>
+            <img src="https://www.f-counter.net/j/63/1706864352/" alt="カウンターカフェ" id="counter_img"></a>
     </div>
 
     <footer style="background-color: #112D4E; text-align: center; padding: 3vh 0 3vh;">
-        <p style="font-size: 3vh; color: #F9F7F7;">Copyright © 2024 MR. All rights reserved.</p>
+        <p id="footer_text">Copyright © 2024 MR. All rights reserved.</p>
     </footer>
 </body>
 </html>

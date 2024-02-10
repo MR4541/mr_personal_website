@@ -76,25 +76,25 @@
 
     <br><br><br><br><br>
 
-    <div class="div_text">
-        <p class="text" style="font-size: 4vw;font-weight: bold;font-family: sans-serif;">回饋區～～</p> <!--已附帶換行效果-->
+    <div class="div_text" >
+        <p class="text" id="rwd_feedback_text" style="font-size: 4vw;font-weight: bold;font-family: sans-serif;">回饋區～～</p> <!--已附帶換行效果-->
     </div>
 
     <!--回饋表單-->
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexw4rxoEx5uupvVFysE6Djx--Hf8cWNbUcv3FY0TK6CTqIvQ/viewform?embedded=true"
-     width="640" height="600" frameborder="0" style="display: block; margin: auto;">載入中…</iframe>
+     width="100%" height="700" frameborder="0" scrolling="no" style="display: block; margin: auto;">載入中…</iframe> 
+    <!--100%寬度用來適應手機尺寸，scrolling=no可以取消右側滾輪-->
 
     <!--造訪人數計算機-->
-    <div class="counter" style="text-align: end; margin-top: 40vh; margin-bottom: 2vh;">
+    <!--以下都複製-->
+    <div class="counter">
         People Visited :
         <a href="https://www.stylemap.co.jp/">
-            <img src="https://www.f-counter.net/j/63/1706864352/" alt="カウンターカフェ" style="height: 1.5vw;"></a>
+            <img src="https://www.f-counter.net/j/63/1706864352/" alt="カウンターカフェ" id="counter_img"></a>
     </div>
 
     <footer style="background-color: #112D4E; text-align: center; padding: 3vh 0 3vh;">
-        <p style="font-size: 3vh; color: #F9F7F7;">Copyright © 2024 MR. All rights reserved.</p>
+        <p id="footer_text">Copyright © 2024 MR. All rights reserved.</p>
     </footer>
-
-    <!--    <div style="height: 9999px; display: flex; justify-content: center; font-size: 10vw;" >以下是用來佔位子的</div>    -->
 </body>
 </html>

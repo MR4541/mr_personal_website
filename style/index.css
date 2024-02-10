@@ -200,13 +200,68 @@ ul{ /*取消原本<ul>的預設排版*/
     text-decoration: none;
     color: #3F72AF;/*滑鼠指到還是變色一下好ㄌ*/
 }
+
+/*非RWD以下都複製*/
 .counter{
     font-size: 1.5vw;
     margin-right: 4vw;
     font-family: sans-serif;
+    text-align: end;
+    margin-top: 40vh;
+    margin-bottom: 2vh;
+}
+#counter_img{
+    height: 1.5vw;
 }
 footer{
     background-color: #112D4E;
     text-align: center;
     padding: 3vh 0 3vh;
+}
+#footer_text{
+    font-size: 3vh; 
+    color: #F9F7F7;
+}
+
+/*RWD，測試以360*780*/
+@media screen and (max-width: 600px) {
+    .drop_down_menu{
+        font-size: 4vw;
+    }
+    .drop_down_menu>li{
+        padding-top: 0.7vw;
+        padding-bottom: 0.7vw;
+    }
+    .drop_down_menu>li:hover>ul{
+        top:6vw;
+    }
+    .counter{
+        font-size: 4vw;
+        margin-right: 10vw;
+        margin-top: 40vw;
+        margin-bottom: 5vw;
+    }
+    #counter_img{
+        height: 4vw;
+    }
+    #footer_text{
+        font-size: 4vw;
+    }
+    /*
+        .counter跟其html有改（inline-style）
+        #counter_img、#footer_text也是
+    */
+    /*到這邊複製*/
+    .div_main_img{
+        height: 50vw;
+    }
+    .div_main_img>a{
+        top: 16.5vw;
+    }
+    .text{
+        font-size: 4vw;
+    }
+    #rwd_feedback_text{
+            font-size: 6vw !important; /*優先度最高，壓過inline-style*/
+    }
 }

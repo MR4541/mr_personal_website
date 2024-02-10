@@ -143,16 +143,125 @@ ul{ /*取消原本<ul>的預設排版*/
     font-size: 6vh;
     padding: 2vh;
 }
-/*
-下面複製貼上就行
-*/
+/*非RWD以下都複製*/
 .counter{
     font-size: 1.5vw;
     margin-right: 4vw;
     font-family: sans-serif;
+    text-align: end;
+    margin-top: 40vh;
+    margin-bottom: 2vh;
+}
+#counter_img{
+    height: 1.5vw;
 }
 footer{
     background-color: #112D4E;
     text-align: center;
     padding: 3vh 0 3vh;
+}
+#footer_text{
+    font-size: 3vh; 
+    color: #F9F7F7;
+}
+#title{
+    text-align: center;
+    padding: 5vh 0;
+    font-size: 8vh;
+    font-weight: bold;
+    margin-bottom: 10vh;
+}
+
+
+.tools_div_text{
+    padding: 0 20vw;
+    margin-top: 20vh;
+}
+/*RWD，測試以360*780*/
+@media screen and (max-width: 600px) {
+    #profile_name_smaller{ /*跟首頁一樣大*/
+        font-size: 6vw; 
+        height: 10vw;
+    }
+    #profile_picture_smaller{
+        width: 6.5vw;
+    }
+    .drop_down_menu{
+        font-size: 4vw;
+    }
+    .drop_down_menu>li{
+        padding-top: 0.7vw;
+        padding-bottom: 0.7vw;
+    }
+    .drop_down_menu>li:hover>ul{
+        top:6vw;
+    }
+    #title{
+        padding: 5vw 0;
+        font-size: 8vw;
+        margin-bottom: 10vw;
+    }
+    .counter{
+        font-size: 4vw;
+        margin-right: 10vw;
+        margin-top: 40vw;
+        margin-bottom: 5vw;
+    }
+    #counter_img{
+        height: 4vw;
+    }
+    #footer_text{
+        font-size: 4vw;
+    }
+    /*
+        .counter跟其html有改（inline-style）
+        #counter_img、#footer_text、#title也是
+    */
+    /*到這邊複製*/
+    .tools_div_text{
+        padding: 0 5vw;
+        margin-top: 10vw;
+    }
+    #rwd_tools_text{
+        font-size: 4vw !important;
+    }
+    h1{
+        font-size: 6vw !important;
+    }
+
+    .div_input{
+        margin: 1vw 5vw;
+        padding: 1vw 0;
+        border-radius: 2vw;
+    }
+    .div_input>*{
+        font-size: 6vw;
+    }
+    .div_input>input{
+        border-radius: 1vw;
+        width: 55%;
+    }
+    #repeat{
+        height: 5vw;
+    }
+    #start{
+        margin: 10vw auto;
+        width: 50vw;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+        font-size: 8vw;
+        border: #112D4E 0.5vw solid;
+        border-radius: 3vw;
+    }
+    #div_result{
+        margin: 15vw 5vw;
+        font-size: 6vw;
+    }
+    #result>div{
+        background-color: #DBE2EF;
+        margin: 0.5vw;
+        border-radius: 1vw;
+        font-size: 6vw;
+        padding: 2vw;
+    }
 }

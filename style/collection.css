@@ -125,16 +125,121 @@ p{
 .return:hover{
     font-weight: bold;
 }
-/*
-下面複製貼上就行
-*/
+.shortcut_span{
+    font-size: 4vh;
+}
+.shortcut_img{
+    height: 5vh;
+    margin-right: 1vw;
+}
+/*非RWD以下都複製*/
 .counter{
     font-size: 1.5vw;
     margin-right: 4vw;
     font-family: sans-serif;
+    text-align: end;
+    margin-top: 40vh;
+    margin-bottom: 2vh;
+}
+#counter_img{
+    height: 1.5vw;
 }
 footer{
     background-color: #112D4E;
     text-align: center;
     padding: 3vh 0 3vh;
+}
+#footer_text{
+    font-size: 3vh; 
+    color: #F9F7F7;
+}
+#back_to_title{
+    text-align: center;
+    padding: 5vh 0;
+    font-size: 8vh;
+    font-weight: bold;
+    margin-bottom: 10vh;
+}
+/*RWD，測試以360*780*/
+@media screen and (max-width: 600px) {
+    #profile_name_smaller{ /*跟首頁一樣大*/
+        font-size: 6vw; 
+        height: 10vw;
+    }
+    #profile_picture_smaller{
+        width: 6.5vw;
+    }
+    .drop_down_menu{
+        font-size: 4vw;
+    }
+    .drop_down_menu>li{
+        padding-top: 0.7vw;
+        padding-bottom: 0.7vw;
+    }
+    .drop_down_menu>li:hover>ul{
+        top:6vw;
+    }
+    #back_to_title{
+        padding: 5vw 0;
+        font-size: 8vw;
+        margin-bottom: 10vw;
+    }
+    .counter{
+        font-size: 4vw;
+        margin-right: 10vw;
+        margin-top: 40vw;
+        margin-bottom: 5vw;
+    }
+    #counter_img{
+        height: 4vw;
+    }
+    #footer_text{
+        font-size: 4vw;
+    }
+    /*
+        .counter跟其html有改（inline-style）
+        #counter_img、#footer_text、#title也是
+    */
+    /*到這邊複製*/
+    h1{
+        font-size: 7vw;
+    }
+    .shortcut{
+        padding: 0 5vw;
+    }
+    .shortcut_hover{
+        height: 8vw;
+        display: inline-block; /*這樣才能設height*/
+        text-decoration: none;
+        color: #112D4E;
+    }
+    .shortcut_span{
+        font-size: 6vw;
+    }
+    .shortcut_img{
+        height: 6vw;
+        margin-right: 2vw;
+    }
+    #rwd_letsgo{
+        height: 40vw !important;
+        font-size: 8vw !important;
+    }
+    article{ /*這是<article>*/
+        padding: 0 5vw;
+    }
+    p{
+        font-size: 5vw;
+    }
+    .picture{
+        width: 100% !important;
+    }
+    .div_return{
+        margin-bottom: 5vw;
+        margin-top: 5vw;
+    }
+    .return{
+        text-decoration: none;
+        font-size: 5vw;
+        color: black;
+    }
 }
