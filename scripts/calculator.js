@@ -92,7 +92,7 @@ $(document).ready(function(){
     $("#equal").click(function(){
         try{
             var ans = eval(operation);
-            if(ans==Infinity) throw "Expression could not be evaluated";
+            if(ans==Infinity || ans==-Infinity) throw "Expression could not be evaluated";
             if(isNaN(ans)) throw "Expression could not be evaluated"; //是否「不是」一個有效的數字; throw完try部分就結束運行了
             ans = Math.round(ans*1e8)/1e8; //四捨五入到小數點後八位
             history = history + "<br>" + operation + " = " + ans;
