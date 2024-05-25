@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR | 實用工具—字數統計</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--設置IE兼容-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> <!--引入jQuery函式庫-->
+    <link rel="stylesheet" href="../style/count.css"> <!--css用哪個檔案-->
+    <script type="text/javascript" src="../scripts/count.js"></script> <!--js用哪個檔案-->
+</head>
+<!--
+    四色
+    #f2f2fa     極淡灰
+    #DBE2EF     淡灰藍
+    #3F72AF     深藍
+    #112D4E     最深藍
+
+    這個網頁的HACKMD大綱 https://hackmd.io/k30qNbF8Qcq3DuPitnKhNQ
+-->
+
+<body style="background-color: #f2f2fa">
+    <!--個人資料相片-->
+    <a href="../index.html" id="a_profile_smaller">
+        <span id="profile_name_smaller">
+            <img src="../assets/images/Yuuki_padoru_full.png" id="profile_picture_smaller" alt="個人資料相片">MR的小小天地</span></a> <!--點頭像可以回到首頁-->
+            
+    <!--選單-->
+    <ul class="drop_down_menu"> <!--下拉式選單-->
+        <li onclick="location.href='./news.html';"><a href="./news.html">最新消息</a></li> <!--這邊的相對路徑記得注意-->
+        <li onclick="location.href='./history.html';"><a href="./history.html">歷史紀錄</a></li> <!--onclick讓整個li都變成超連結-->
+        <li onclick="location.href='./tools.html';"><a href="./tools.html">實用工具</a>
+            <ul> <!--用event.stopPropagation()防止DOM樹傳播訊息，最後導致載入外層(即上一層li)的連結-->
+                <li onclick="event.stopPropagation(); location.href='./tools.html';"><a href="./tools.html">總覽</a></li>
+                <li onclick="event.stopPropagation(); location.href='./calculator.html';"><a href="./calculator.html">計算機</a></li>
+                <li onclick="event.stopPropagation(); location.href='./timer.html';"><a href="./timer.html">倒數計時器</a></li>
+                <li onclick="event.stopPropagation(); location.href='./drawlots.html';"><a href="./drawlots.html">隨機抽籤</a></li>
+                <li onclick="event.stopPropagation(); location.href='./count.html';"><a href="./count.html">字數統計</a></li>
+            </ul>
+        </li>
+        <li onclick="location.href='./collection.html';"><a href="./collection.html">其他作品</a></li>
+    </ul>
+
+<!--到這邊都可以複製-->
+
+    <div id="title">實用工具——字數統計</div>  <!--因為RWD有改-->
+
+    <textarea name="input" id="input" placeholder="在這裡輸入想計算字數的文字" ></textarea>
+    
+    <div class="div_result">
+        <div style="width: 49%; display: inline-block;" class="rwd_subdiv_result">
+            <div class="result">全字數：</div><div class="result" id="allCnt">0</div><br>
+            <div class="result">中文字數（不含標點）：</div><div class="result" id="chinCnt">0</div><br>
+            <div class="result">全形標點數：</div><div class="result" id="puncCnt">0</div><br>
+        </div>
+        <div style="width: 49%; display: inline-block;" class="rwd_subdiv_result">
+            <div class="result">英文字數（含半形標點、空白、換行）：</div><div class="result" id="engCnt">0</div><br>
+            <div class="result">英文單字數：</div><div class="result" id="enWordCnt">0</div><br>
+            <div class="result">數字數：</div><div class="result" id="numCnt">0</div><br>
+        </div>
+    </div>
+
+    <div class="tools_div_text">
+        <h1 style="font-size: 5vh; font-family: sans-serif;">使用說明與注意事項</h1>
+        <p  id="rwd_tools_text" style="font-size: 4vh; font-family: sans-serif;">
+            1.全形空白記入全形標點符號。<br>
+            2.英文中穿插數字如「2abc」、「opq3rst」、「xyz4」等皆算為一個單字。<br>
+            3.單純數字不計入英文單字。
+        </p>
+    </div>
+    
+<!--以下可直接複製貼上-->
+
+    <!--造訪人數計算機-->
+    <!--以下都複製（RWD）-->
+    <div class="counter">
+        People Visited :
+        <a href="https://www.stylemap.co.jp/">
+            <img src="https://www.f-counter.net/j/63/1706864352/" alt="カウンターカフェ" id="counter_img"></a>
+    </div>
+
+
+    <footer style="background-color: #112D4E; text-align: center; padding: 3vh 0 3vh;">
+        <p id="footer_text">Copyright © 2024 MR. All rights reserved.</p>
+    </footer>
+</body>
+</html>
