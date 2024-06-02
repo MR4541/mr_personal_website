@@ -47,7 +47,7 @@ ul{ /*取消原本<ul>的預設排版*/
 .drop_down_menu>li{
     position: relative;
     white-space: nowrap; /*空格不換行*/
-    width: 25%;
+    width: 20%;
     background-color: #3F72AF;
     text-align: center;
     float: left;

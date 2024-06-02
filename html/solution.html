@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MR | 實用工具——隨機抽籤</title>
+    <title>MR | 解題紀錄</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--設置IE兼容-->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> <!--引入jQuery函式庫-->
-    <link rel="stylesheet" href="../style/drawlots.css"> <!--css用哪個檔案-->
-    <script type="text/javascript" src="../scripts/drawlots.js"></script> <!--js用哪個檔案-->
+    <link rel="stylesheet" href="../style/solution.css"> <!--css用哪個檔案-->
+    <script type="text/javascript" src="../scripts/solution.js"></script> <!--js用哪個檔案-->
 </head>
 <!--
     四色
@@ -41,30 +41,46 @@
         <li onclick="location.href='./solution.html';"><a href="./solution.html">解題紀錄</a></li>
         <li onclick="location.href='./collection.html';"><a href="./collection.html">其他作品</a></li>
     </ul>
-
+    
 <!--到這邊都可以複製-->
 
-    <div id="title">實用工具——隨機抽籤</div>
+    <div id="back_to_title">解題紀錄</div>
 
-    <div class="div_input"><span>從：</span><input id="from"        type="number" placeholder="開始號碼"></div>
-    <div class="div_input"><span>到：</span><input id="to"          type="number" placeholder="結束號碼"></div>
-    <div class="div_input"><span>抽出組數：</span><input id="count" type="number" placeholder="例如：5"></div>
-    <div class="div_input"><input type="checkbox" value="" id="repeat"><label for="repeat">抽出號碼可重複</label></div> <!--label for="欲連結checkbox的id"-->
+    <article>
+        <p>這個頁面將會有我所解過的題目，包含數學與程式等方面，我將題解或程式碼放置於HackMD、GitHub上，點擊下方連結就可以看到喔～～</p>
+    </article>
+    
+    <br><br>
 
-    <div id="start">開始抽籤！</div>
-
-    <div id="div_result">
-        <div style="text-align: center; background-color: #DBE2EF; border-radius: 1vw; margin-bottom: 2vh; padding: 2vh 0;">抽籤結果（順序為左到右）</div>
-        <div id="result"> <!--用js來新增/清空子元素的div-->
-        </div>
-    </div>
-
-    <div class="tools_div_text">
-        <h1 style="font-size: 5vh; font-family: sans-serif;">使用說明與注意事項</h1>
-        <p  id="rwd_tools_text" style="font-size: 4vh; font-family: sans-serif;">
-            1.抽取範圍請輸入整數；抽取組數請輸入正整數。<br>
-            2.抽取組數在10000組以下時較不會出現卡頓現象，想搞事的請斟酌參考。
-        </p>
+    <div class="shortcut">
+        <h1>程式設計</h1>
+        <a href="https://github.com/MR4541/Self-directed_Learning" target="_blank" class="shortcut_hover"> <!--記得用id="colorpencil"做錨點-->
+            <span class="shortcut_span"><img src="../assets/images/rightarrow.png" class="shortcut_img" alt="右箭頭">C++題解*73（高中自主學習做的）</span>
+        </a>
+        <h1>數學</h1>
+        <a href="https://hackmd.io/@MR4541/ryf6kWsQC" target="_blank" class="shortcut_hover"> 
+            <span class="shortcut_span"><img src="../assets/images/rightarrow.png" class="shortcut_img" alt="右箭頭">台大資工2018二階數學題解</span>
+        </a>
+        <br>
+        <a href="https://hackmd.io/@MR4541/Hkx7o0ZqQ0" target="_blank" class="shortcut_hover"> 
+            <span class="shortcut_span"><img src="../assets/images/rightarrow.png" class="shortcut_img" alt="右箭頭">台大資工2017二階數學題解</span>
+        </a>
+        <br>
+        <a href="https://hackmd.io/@MR4541/HyBv_OK7C" target="_blank" class="shortcut_hover"> 
+            <span class="shortcut_span"><img src="../assets/images/rightarrow.png" class="shortcut_img" alt="右箭頭">台大資工2016二階數學題解</span>
+        </a>
+        <br>
+        <a href="https://hackmd.io/@MR4541/SJhp2nuXC" target="_blank" class="shortcut_hover"> 
+            <span class="shortcut_span"><img src="../assets/images/rightarrow.png" class="shortcut_img" alt="右箭頭">台大資工2014二階數學題解</span>
+        </a>
+        <br>
+        <a href="https://hackmd.io/@MR4541/SJnFiV_70" target="_blank" class="shortcut_hover"> 
+            <span class="shortcut_span"><img src="../assets/images/rightarrow.png" class="shortcut_img" alt="右箭頭">交大資工2024二階經驗分享＆筆試題目</span>
+        </a>
+        <h1>其他</h1>
+        <a href="https://hackmd.io/@MR4541/SksTI4OQR" target="_blank" class="shortcut_hover"> 
+            <span class="shortcut_span"><img src="../assets/images/rightarrow.png" class="shortcut_img" alt="右箭頭">成大資工2024二階經驗分享＆筆試題目</span>
+        </a>
     </div>
 
 <!--以下可直接複製貼上-->
