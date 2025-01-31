@@ -1,91 +1,3 @@
-.under_construction:hover{ /*用來標記還沒做完的*/
-    background-color: yellow;
-    color: black;
-    font-weight: bold;
-}
-#profile_name_smaller{
-    background-color: #DBE2EF;
-    display: flex; /*下面兩行要在flex才能用*/
-    align-items: center; /*區塊內的「物件」上下置中*/
-    justify-content: center; /*區塊內的「物件」左右置中*/
-    font-size: 4vw; /*螢幕可視範圍的百分比*/
-    height: 7vw;
-    font-family:  sans-serif; /*設定字體*/
-    font-weight: bold; /*粗體*/
-}
-#a_profile_smaller{
-    text-decoration: none;
-    color: #112D4E;
-}
-#a_profile_smaller:hover, #a_profile_smaller:visited, #a_profile_smaller:link, #a_profile_smaller:active {
-    text-decoration: none;/*不管被點、滑鼠指到、造訪過...都不要讓超連結顯示底線*/
-    color: #112D4E;
-}
-#profile_picture_smaller{
-    width: 4.5vw;
-    margin-right: 1vw;
-    border: 3px #112D4E solid;
-    border-radius: 100%;
-}
-ul{ /*取消原本<ul>的預設排版*/
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.drop_down_menu{
-    position: sticky; /*會卡在最上面*/
-    top:0; /*要告訴他要黏在哪裡*/
-    display: inline-block;/*讓元素排成一行*/
-    border: none;
-    font-size: 1.5vw;
-    width: 100%;
-    z-index: 999; /*圖層，越大越上層，防止被蓋過*/
-}
-.drop_down_menu>li{
-    position: relative;
-    white-space: nowrap; /*空格不換行*/
-    width: 20%;
-    background-color: #3F72AF;
-    text-align: center;
-    float: left;
-}
-.drop_down_menu>li:hover{
-    background-color: #1e4672;
-    font-weight: bold;
-}
-.drop_down_menu>li>a{
-    text-decoration: none;
-    color: white;
-    line-height: 3vw;
-}
-.drop_down_menu>li>ul>li{ /*第二層選單開始*/
-    background-color: #3F72AF;
-    text-align: center;
-    font-weight: 100; /*因為第一層滑入後會有粗體效果，不設定的話第二層會繼承到*/
-}
-.drop_down_menu>li>ul>li:hover{
-    background-color: #1e4672;
-    font-weight: bold;
-}
-.drop_down_menu>li>ul>li>a{
-    text-decoration: none;
-    color: white;
-    line-height: 1.5;
-}
-.drop_down_menu>li>ul{
-    display: none;
-}
-.drop_down_menu>li:hover>ul{
-    display: block;
-    position: absolute; /*使用absolute，下方的元素才不會被擠開*/
-    top: 3vw;
-    width: 100%;
-    z-index: 1000;
-}
-/*
-上面複製貼上就行（_smaller是給分頁使用）
-*/
-
 #input{ /*<textarea>*/
     margin: 2vh 23vw;
     min-height: 50vh;
@@ -110,26 +22,6 @@ ul{ /*取消原本<ul>的預設排版*/
 
 
 /*非RWD以下都複製*/
-.counter{
-    font-size: 1.5vw;
-    margin-right: 4vw;
-    font-family: sans-serif;
-    text-align: end;
-    margin-top: 40vh;
-    margin-bottom: 2vh;
-}
-#counter_img{
-    height: 1.5vw;
-}
-footer{
-    background-color: #112D4E;
-    text-align: center;
-    padding: 3vh 0 3vh;
-}
-#footer_text{
-    font-size: 3vh; 
-    color: #F9F7F7;
-}
 #title{
     text-align: center;
     padding: 5vh 0;
@@ -144,39 +36,10 @@ footer{
     margin-top: 20vh;
 }
 @media screen and (max-width: 600px) {
-    #profile_name_smaller{ /*跟首頁一樣大*/
-        font-size: 6vw; 
-        height: 10vw;
-    }
-    #profile_picture_smaller{
-        width: 6.5vw;
-    }
-    .drop_down_menu{
-        font-size: 4vw;
-    }
-    .drop_down_menu>li{
-        padding-top: 0.7vw;
-        padding-bottom: 0.7vw;
-    }
-    .drop_down_menu>li:hover>ul{
-        top:6vw;
-    }
     #title{
         padding: 5vw 0;
         font-size: 8vw;
         margin-bottom: 5vw;
-    }
-    .counter{
-        font-size: 4vw;
-        margin-right: 10vw;
-        margin-top: 40vw;
-        margin-bottom: 5vw;
-    }
-    #counter_img{
-        height: 4vw;
-    }
-    #footer_text{
-        font-size: 4vw;
     }
     /*
         .counter跟其html有改（inline-style）

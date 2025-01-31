@@ -1,0 +1,39 @@
+/*
+    footer.html的css
+*/
+.counter{
+    font-size: 1.5vw;
+    margin-right: 4vw;
+    font-family: sans-serif;
+    text-align: end;
+    margin-top: 40vh;
+    margin-bottom: 2vh;
+}
+#counter_img{
+    height: 1.5vw;
+}
+footer{
+    background-color: #112D4E;
+    text-align: center;
+    padding: 3vh 0 3vh;
+}
+#footer_text{
+    font-size: 3vh; 
+    color: #F9F7F7;
+}
+
+/*RWD*/
+@media screen and (max-width: 600px) {
+    .counter{
+        font-size: 4vw;
+        margin-right: 10vw;
+        margin-top: 40vw;
+        margin-bottom: 5vw;
+    }
+    #counter_img{
+        height: 4vw;
+    }
+    #footer_text{
+        font-size: 4vw;
+    }
+}

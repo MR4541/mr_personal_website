@@ -20,28 +20,11 @@
 -->
 
 <body style="background-color: #f2f2fa">
-    <!--個人資料相片-->
-    <a href="../index.html" id="a_profile_smaller">
-        <span id="profile_name_smaller">
-            <img src="../assets/images/Yuuki_padoru_full.png" id="profile_picture_smaller" alt="個人資料相片">MR的小小天地</span></a> <!--點頭像可以回到首頁-->
 
-    <!--選單-->
-    <ul class="drop_down_menu"> <!--下拉式選單-->
-        <li onclick="location.href='./news.html';"><a href="./news.html">最新消息</a></li> <!--這邊的相對路徑記得注意-->
-        <li onclick="location.href='./history.html';"><a href="./history.html">歷史紀錄</a></li> <!--onclick讓整個li都變成超連結-->
-        <li onclick="location.href='./tools.html';"><a href="./tools.html">實用工具</a>
-            <ul> <!--用event.stopPropagation()防止DOM樹傳播訊息，最後導致載入外層(即上一層li)的連結-->
-                <li onclick="event.stopPropagation(); location.href='./tools.html';"><a href="./tools.html">總覽</a></li>
-                <li onclick="event.stopPropagation(); location.href='./calculator.html';"><a href="./calculator.html">計算機</a></li>
-                <li onclick="event.stopPropagation(); location.href='./timer.html';"><a href="./timer.html">倒數計時器</a></li>
-                <li onclick="event.stopPropagation(); location.href='./drawlots.html';"><a href="./drawlots.html">隨機抽籤</a></li>
-                <li onclick="event.stopPropagation(); location.href='./count.html';"><a href="./count.html">字數統計</a></li>
-            </ul>
-        </li>
-        <li onclick="location.href='./solution.html';"><a href="./solution.html">解題紀錄</a></li>
-        <li onclick="location.href='./collection.html';"><a href="./collection.html">其他作品</a></li>
-    </ul>
-    
+    <!--Load Header; 因為file:// 會擋CORS，所以要用live server開-->
+    <div id="header-container"></div> <!--Use to contain the html loaded-->
+    <script type="text/javascript" src="../scripts/header_footer.js"></script>
+
 <!--到這邊都可以複製-->
 
     <div id="back_to_title">解題紀錄</div>
@@ -85,16 +68,7 @@
 
 <!--以下可直接複製貼上-->
 
-    <!--造訪人數計算機-->
-    <!--以下都複製（RWD）-->
-    <div class="counter">
-        People Visited :
-        <a href="https://www.stylemap.co.jp/">
-            <img src="https://www.f-counter.net/j/63/1706864352/" alt="カウンターカフェ" id="counter_img"></a>
-    </div>
+    <div id = "footer-container"></div>
 
-    <footer style="background-color: #112D4E; text-align: center; padding: 3vh 0 3vh;">
-        <p id="footer_text">Copyright © 2024 MR. All rights reserved.</p>
-    </footer>
 </body>
 </html>
