@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR | 實用工具—圖片處理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--設置IE兼容-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> <!--引入jQuery函式庫-->
+    <link rel="stylesheet" href="../style/imgprocess.css"> <!--css用哪個檔案-->
+    <script type="text/javascript" src="../scripts/imgprocess.js"></script> <!--js用哪個檔案-->
+</head>
+<!--
+    四色
+    #f2f2fa     極淡灰
+    #DBE2EF     淡灰藍
+    #3F72AF     深藍
+    #112D4E     最深藍
+
+    這個網頁的HACKMD大綱 https://hackmd.io/k30qNbF8Qcq3DuPitnKhNQ
+-->
+
+<body style="background-color: #f2f2fa">
+
+    <!--Load Header; 因為file:// 會擋CORS，所以要用live server開-->
+    <div id="header-container"></div> <!--Use to contain the html loaded-->
+    <script type="text/javascript" src="../scripts/header_footer.js"></script>
+
+<!--到這邊都可以複製-->
+
+    <div id="title">實用工具——圖片處理</div>
+
+    <div class="select_div">
+        <label>選擇功能：
+            <select onchange="updateInputFields()" id="functionSelect">
+                <option value="extend">單色背景擴展</option>
+                <option value="convert">轉檔</option>
+                <option value="grayscale">轉成灰階</option>
+            </select>
+        </label>
+    </div>
+
+    <!--通用輸入-->
+    <div class="input_group">
+        <label>選擇圖片
+            <input type="file" id="fileInput" style="width: 70%; font-size: 4vh;">
+        </label>
+    </div>
+
+    <!--擴圖輸入-->
+    <div class="input_group function_extend">
+        <div>寬高比：</div>
+        <input placeholder="寬度" type="number" id="width" min="1">
+        <div>：</div>
+        <input placeholder="高度" type="number" id="height" min="1">
+        <div style="width: 100%;"></div> <!--br-->
+        <label>選擇背景顏色：
+            <input type="color" id="color" style="transform: scale(1.4);">
+        </label>
+        <div style="width: 100%;"></div> <!--br-->
+        <label>透明度：
+            <input placeholder="預設255（不透明）" type="number" id="alpha" min="0" max="255">
+        </label>
+    </div>
+
+    <!--轉檔輸入-->
+    <div class="input_group function_convert">
+        <label>選擇輸出格式
+            <select id="format">
+                <option value="jpg">JPG</option>
+                <option value="png">PNG</option>
+                <option value="ppm">PPM/PGM</option>
+            </select>
+        </label>
+    </div>
+
+    <!--灰階輸入：無-->
+
+    <!--確認鍵-->
+    <div class="input_group" style="background-color: #f2f2fa;">
+        <button onclick="uploadImage()" id="uploadButton">上傳並處理</button>
+    </div>
+    
+    <!--等待後端回傳-->
+    <div class="waiting_group">
+        <p>圖片正在處理...</p>
+    </div>
+
+    <div class="output_group">
+        <p>圖片預覽</p>
+        <div style="width: 100%;"></div> <!--br-->
+        <p id="outputFilename"></p>
+        <div style="width: 100%;"></div> <!--br-->
+        <img id="preview_img">
+        <div style="width: 100%;"></div> <!--br-->
+    </div>
+    
+    <div class="output_group" style="background-color: #f2f2fa;">
+        <button onclick="downloadImg()" id="download_button">下載處理後圖片</button>
+    </div>
+
+    <div class="tools_div_text">
+        <h1 style="font-size: 5vh; font-family: sans-serif;">使用說明與注意事項</h1>
+        <p  id="rwd_tools_text" style="font-size: 4vh; font-family: sans-serif;">
+            1.PPM/PGM無法預覽是正常現象。<br>
+            <br>單色背景擴展<br>
+            1.透過選擇寬高比、背景RGB值，並選擇性輸入透明度(0-255)。<br>
+            <br>轉檔<br>
+            1.可以在JPG、PNG、PPM/PGM格式之間轉換。<br>
+            2.只需要選擇目標格式，輸入格式可任意選擇。<br>
+            <br>轉成灰階<br>
+            1.將圖片轉成黑白色調<br>
+            2.如果輸入格式是.ppm則輸出會自動變為.pgm
+        </p>
+    </div>
+
+
+<!--以下可直接複製貼上-->
+
+<div id = "footer-container"></div>
+
+</body>
+</html>
