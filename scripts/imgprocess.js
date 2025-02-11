@@ -57,6 +57,7 @@ async function uploadImage() {
         let heightRatio = Number(document.getElementById("height").value);
         if(!Number.isInteger(widthRatio) || !Number.isInteger(heightRatio) || widthRatio <= 0 || heightRatio <= 0){
             alert("寬、高請輸入大等於1的整數值!");
+            waiting_group.style.display = "none"; //隱藏「處理中」訊息
             return;
         }
         formData.append("widthRatio", widthRatio);
@@ -65,6 +66,7 @@ async function uploadImage() {
             let alphaChannel = Number(document.getElementById("alpha").value);
             if(!Number.isInteger(alphaChannel) || alphaChannel < 0 || alphaChannel > 255){
                 alert("透明度請輸入0-255的整數值或是留空!")
+                waiting_group.style.display = "none"; //隱藏「處理中」訊息
                 return;
             }
             formData.append("alpha", alphaChannel);
@@ -106,7 +108,7 @@ async function uploadImage() {
     }
 
     if (response.ok) {
-        waiting_group.style.display = "none";
+        waiting_group.style.display = "none"; //隱藏「處理中」訊息
         let result = await response.json();
         document.querySelectorAll(".output_group").forEach(group => {
             group.style.display = "flex";
