@@ -26,7 +26,7 @@ function makeFetchUrl(reqpath, isLocalhost){
     if(isLocalhost){
         return "http://localhost:8080" + reqpath;
     }else{
-        return "http://34.83.158.232:8080" + reqpath;
+        return "https://api.mr.ckeisc.org" + reqpath;
     }
 }
 
