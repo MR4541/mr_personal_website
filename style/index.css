@@ -4,6 +4,12 @@
     font-weight: bold;
 }
 /*
+    把body的margin搞掉
+*/
+body{
+    margin: 0;
+}
+/*
 上面複製貼上就行
 */
 #profile_name{
@@ -94,15 +100,14 @@ ul{ /*取消原本<ul>的預設排版*/
     z-index: -999; 
 }
 .div_main_img>a>img{ /*限制圖片大小*/
-    max-width: 98vw;
-    min-width: 98vw;
+    max-width: 100%;
+    min-width: 100%;
     z-index: -999; 
 }
 .div_main_img>a{ /*div_main_img下的所有子元素a*/
     display: block;
     position: absolute; /*要把七個圖片限制在同個位置*/
-    top:29.5vh;
-    left:0.5vw;
+    top:28.9vh;
     opacity: 0;
     filter: alpha(opacity=0); /*確保在舊版本可運行，透明度（0~100）*/
 /*影片長度=每張圖片5秒＊7張圖*/
@@ -173,7 +178,7 @@ ul{ /*取消原本<ul>的預設排版*/
 }
 .text{
     font-size: 2vw;
-    width: 100vw;
+    width: 100%;
 }
 .div_text{
     text-align: center; /*文字置中*/
@@ -246,6 +251,9 @@ footer{
     }
     #footer_text{
         font-size: 4vw;
+    }
+    #profile_picture{
+        border: 1.7px #112D4E solid;
     }
     /*
         .counter跟其html有改（inline-style）

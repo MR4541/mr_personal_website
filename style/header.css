@@ -1,4 +1,11 @@
 /*
+    把body的margin搞掉
+*/
+body{
+    margin: 0;
+}
+
+/*
     header.html的css
 */
 #profile_name_smaller{
@@ -89,6 +96,7 @@ ul{ /*取消原本<ul>的預設排版*/
     }
     #profile_picture_smaller{
         width: 6.5vw;
+        border: 1.7px #112D4E solid;
     }
     .drop_down_menu{
         font-size: 4vw;
