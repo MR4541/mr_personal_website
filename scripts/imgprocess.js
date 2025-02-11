@@ -33,7 +33,7 @@ function makeFetchUrl(reqpath, isLocalhost){
 //把回傳URL從localhost改成GCP
 function localhostToGCP(url){
     var filename = url.substring(url.lastIndexOf('/')+1);
-    return "http://34.83.158.232:8080/processed/" + filename;
+    return "https://api.mr.ckeisc.org/processed/" + filename;
 }
 
 async function uploadImage() {
