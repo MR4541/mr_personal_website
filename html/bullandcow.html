@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR | 1A2B—自製遊戲</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--設置IE兼容-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> <!--引入jQuery函式庫-->
+    <link rel="stylesheet" href="../style/bullandcow.css"> <!--css用哪個檔案-->
+    <script type="text/javascript" src="../scripts/bullandcow.js"></script> <!--js用哪個檔案-->
+</head>
+<!--
+    四色
+    #f2f2fa     極淡灰
+    #DBE2EF     淡灰藍
+    #3F72AF     深藍
+    #112D4E     最深藍
+
+    這個網頁的HACKMD大綱 https://hackmd.io/k30qNbF8Qcq3DuPitnKhNQ
+-->
+
+<body style="background-color: #f2f2fa">
+
+    <!--Load Header; 因為file:// 會擋CORS，所以要用live server開-->
+    <div id="header-container"></div> <!--Use to contain the html loaded-->
+    <script type="text/javascript" src="../scripts/header_footer.js"></script>
+
+<!--到這邊都可以複製-->
+
+<div id="title">自製遊戲——1A2B</div>
+
+<div class="select_div">
+    <label>選擇猜數字方：
+        <select onchange="updateInputFields()" id="playerSelect">
+            <option value="computer">電腦</option>
+            <option value="human">玩家</option>
+        </select>
+    </label>
+</div>
+
+<!--div for computer-->
+<div class="div_group player_computer">
+    <div id="computer_guess">電腦猜測：</div>
+    <div id="computer_respond">
+        輸入對應AB數：
+        <input placeholder="預設0" type="number" id="computer_A" min="0" max="4">
+        A
+        <input placeholder="預設0" type="number" id="computer_B" min="0" max="4">
+        B
+    </div>
+</div>
+
+<div class="div_group player_computer">
+    <button id="computer_send">送出</button>
+</div>
+
+<div class="div_group player_computer">
+    <div>猜測過程紀錄：</div>
+    <div id="computer_record"></div>
+</div>
+
+<div class="div_group player_computer">
+    <button id="start_button_computer" onclick="startGame_computer()">開始</button> <!--按過一次會變「重新開始」-->
+</div>
+
+
+<!--div for human-->
+<div class="div_group player_human">
+    <div id="human_respond">上次猜測結果：</div>
+    <div id="human_guess">
+        輸入猜測數字：
+        <input placeholder="預設0123" type="number" id="human_guess_input" min="0123" max="9876">
+    </div>
+</div>
+
+<div class="div_group player_human">
+    <button id="human_send">送出</button>
+</div>
+
+<div class="div_group player_human">
+    <div>猜測過程紀錄：</div>
+    <div style="width: 100%;"></div> <!--br-->
+    <div id="human_record"></div>
+</div>
+
+<div class="div_group player_human">
+    <button id="start_button_human" onclick="startGame_human()">開始</button> <!--按過一次會變「重新開始」-->
+</div>
+
+<!-- <button id="testEfficient" onclick="testEfficient()">TEST</button> -->
+
+<div class="tools_div_text">
+    <h1 style="font-size: 5vh; font-family: sans-serif;">使用說明與注意事項</h1>
+    <p  id="rwd_tools_text" style="font-size: 4vh; font-family: sans-serif;">
+        1.電腦解的平均猜測次數為5.3060（測試10000次）。<br>
+        2.答案數字的四位不能重複；但可以是0開頭，總共有10*9*8*7=5040組。<br>
+    </p>
+</div>
+
+<!--以下可直接複製貼上-->
+
+<div id = "footer-container"></div>
+
+</body>
+</html>

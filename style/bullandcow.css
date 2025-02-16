@@ -1,0 +1,136 @@
+select, input{
+    border: none;
+    border-radius: 0.5vw;
+    background-color: #f2f2fa;
+}
+
+.select_div{
+    margin: 2vh 25vw;
+    padding: 1vh 5vw;
+    background-color: #DBE2EF;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#computer_A, #computer_B, #human_guess_input{
+    text-align: center;
+}
+
+.div_group{
+    margin: 2vh 25vw;
+    padding: 1vh 5vw;
+    background-color: #DBE2EF;
+    border-radius: 1vw;
+    display: flex;
+    flex-wrap: wrap; /*元素超出div大小會自動換行，於是可以用寬度100空div當<br>*/
+    justify-content: center;
+    align-items: center;
+}
+
+.div_group *, .select_div *{
+    font-size: 5vh;
+}
+
+#computer_send, #human_send{
+    border: #112D4E 0.2vw solid !important;
+    background-color: #DBE2EF;
+    border: none;
+    min-height: 10vh;
+    border-radius: 1vw;
+    width: 50%;
+}
+#computer_send:hover, #human_send:hover{
+    background-color: #3F72AF;
+    font-weight: bold;
+    color: #f2f2fa;
+}
+
+#start_button_computer, #start_button_human{
+    margin: 0vh auto;
+    min-width: 20vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-align: center;
+    font-size: 7vh;
+    border: #112D4E 0.2vw solid;
+    background-color: #DBE2EF;
+    border-radius: 1vw;
+    min-height: 10vh;
+}
+#start_button_computer:hover, #start_button_human:hover{
+    background-color: #3F72AF;
+    font-weight: bold;
+    color: #f2f2fa;
+}
+div:has(#start_button_computer), div:has(#computer_send), div:has(#start_button_human), div:has(#human_send){
+    background-color: #f2f2fa;;
+}
+
+/*非RWD以下都複製*/
+#title{
+    text-align: center;
+    padding: 5vh 0;
+    font-size: 8vh;
+    font-weight: bold;
+    margin-bottom: 10vh;
+}
+
+
+.tools_div_text{
+    padding: 0 20vw;
+    margin-top: 20vh;
+}
+/*RWD，測試以360*780*/
+@media screen and (max-width: 600px) {
+    #title{
+        padding: 5vw 0;
+        font-size: 8vw;
+        margin-bottom: 10vw;
+    }
+    /*
+        .counter跟其html有改（inline-style）
+        #counter_img、#footer_text、#title也是
+    */
+    /*到這邊複製*/
+    .tools_div_text{
+        padding: 0 5vw;
+        margin-top: 10vw;
+    }
+    #rwd_tools_text{
+        font-size: 4vw !important;
+    }
+    h1{
+        font-size: 6vw !important;
+    }
+    /*到這邊是使用說明與注意事項*/
+
+    .div_group *, .select_div *{
+        font-size: 5vw;
+    }
+    .select_div{
+        margin: 2vh 5vw;
+        padding: 1vh 5vw;
+        border-radius: 1vh;
+    }
+    .div_group{
+        margin: 2vh 5vw;
+        padding: 1vh 5vw;
+        border-radius: 1vh;
+    }
+    #computer_send, #human_send{
+        min-height: 5vh;
+        border-radius: 1vh;
+        width: 50%;
+    }
+    #start_button_computer, #start_button_human{
+        margin: 10vw auto;
+        width: 50vw;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+        font-size: 8vw;
+        border: #112D4E 0.5vw solid;
+        border-radius: 3vw;
+    }
+}

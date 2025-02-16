@@ -1,0 +1,57 @@
+article{ /*這是<article>*/
+    padding: 0 14vw;
+}
+p{
+    font-size: 4vh;
+    line-height: 1.5;
+}
+h1{
+    font-size: 5vh;
+}
+h1>a{
+    text-decoration: none;
+    color: black;
+}
+h1>a:hover{
+    color: #3F72AF;
+}
+.rightarrow{
+    height: 5vh; 
+    margin-right: 1vw;
+}
+/*非RWD以下都複製*/
+#title{
+    text-align: center;
+    padding: 5vh 0;
+    font-size: 8vh;
+    font-weight: bold;
+    margin-bottom: 10vh;
+}
+/*RWD，測試以360*780*/
+@media screen and (max-width: 600px) {
+    #title{
+        padding: 5vw 0;
+        font-size: 8vw;
+        margin-bottom: 10vw;
+    }
+    /*
+        .counter跟其html有改（inline-style）
+        #counter_img、#footer_text、#title也是
+    */
+    /*到這邊複製*/
+    article{
+        padding: 0 5vw;
+        margin-bottom: 100vw;
+    }
+    p{
+        font-size: 4vw;
+        line-height: 1.5;
+    }
+    h1{
+        font-size: 5vw;
+    }
+    .rightarrow{
+        height: 5vw; 
+        margin-right: 2vw;
+    }
+}
