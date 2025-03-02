@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR | 康威生命遊戲—自製遊戲</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--設置IE兼容-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> <!--引入jQuery函式庫-->
+    <link rel="stylesheet" href="../style/gameoflife.css"> <!--css用哪個檔案-->
+</head>
+<!--
+    四色
+    #f2f2fa     極淡灰
+    #DBE2EF     淡灰藍
+    #3F72AF     深藍
+    #112D4E     最深藍
+
+    這個網頁的HACKMD大綱 https://hackmd.io/k30qNbF8Qcq3DuPitnKhNQ
+-->
+
+<body style="background-color: #f2f2fa">
+
+    <!--Load Header; 因為file:// 會擋CORS，所以要用live server開-->
+    <div id="header-container"></div> <!--Use to contain the html loaded-->
+    <script type="text/javascript" src="../scripts/header_footer.js"></script>
+
+<!--到這邊都可以複製-->
+
+<div id="title">自製遊戲——康威生命遊戲</div>
+
+<div id="main_div">
+    <canvas id="gameCanvas"></canvas>
+    <div style="width: 100%;"></div> <!--br-->
+    <span><label>
+        寬度：
+        <input placeholder="50" id="width">
+    </label></span>
+    <div style="width: 100%;"></div> <!--br-->
+    <span><label>
+        高度：
+        <input placeholder="50" id="height">
+    </label></span>
+    <div style="width: 100%;"></div> <!--br-->
+    <span><label>
+        更新時間（秒）：
+        <input placeholder="0.1" id="sleepS">
+    </label></span>
+    <div style="width: 100%;"></div> <!--br-->
+    <span><label>
+        隨機點亮方格密度（預設0）：
+        <input placeholder="0-100" id="randomLight">
+    </label></span>
+    <button onclick="updateCanvas()">更新設定</button>
+    <button id="toggleButton" data-running="false">開始</button> <!--相當於宣告了running變數，可以用dataset.running存取-->
+</div>
+
+<div class="tools_div_text">
+    <h1 style="font-size: 5vh; font-family: sans-serif;">使用說明與注意事項</h1>
+    <p  id="rwd_tools_text" style="font-size: 4vh; font-family: sans-serif;">
+        1.這是一個康威生命遊戲的模擬器，可以設定想要的畫面格數、更新速度，並透過點擊或是隨機的方式點亮方格。<br>
+        2.由於程式的運算能力有其上限，如果設定的尺寸較大可能會無法按照設定的速度更新。<br>
+    </p>
+</div>
+
+<!--以下可直接複製貼上-->
+
+<div id = "footer-container"></div>
+
+<script type="text/javascript" src="../scripts/gameoflife.js"></script> <!--確保DOM在script之前已經load好--> 
+
+</body>
+</html>

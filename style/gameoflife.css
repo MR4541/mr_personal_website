@@ -1,0 +1,112 @@
+#gameCanvas{
+    display: block;
+    border: 1px solid #112D4E;
+    margin: 2vh auto;
+}
+
+#main_div{
+    margin: 2vh 10vw;
+}
+
+#main_div *{
+    font-size: 5vh;
+}
+
+span:has(#width), span:has(#height), span:has(#sleepS){
+    display: block;
+    width: 50%;
+    margin: 1vh auto;
+    padding: 1vh 0;
+    background-color: #DBE2EF;
+    border-radius: 1vw;
+    text-align: center;
+}
+
+span:has(#randomLight){
+    display: block;
+    width: 80%;
+    margin: 1vh auto;
+    padding: 1vh 0;
+    background-color: #DBE2EF;
+    border-radius: 1vw;
+    text-align: center;
+}
+
+#main_div > span > label > input{
+    border: none;
+    border-radius: 0.5vw;
+    background-color: #f2f2fa;
+    width: 30%;
+    text-align: center;
+}
+
+button{
+    display: block;
+    margin: 1vh auto;
+    min-width: 20vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    text-align: center;
+    font-size: 7vh;
+    border: #112D4E 0.2vw solid;
+    background-color: #DBE2EF;
+    border-radius: 1vw;
+    min-height: 10vh;
+}
+
+#toggleButton:hover{
+    background-color: #3F72AF;
+    font-weight: bold;
+    color: #f2f2fa;
+}
+
+/*非RWD以下都複製*/
+#title{
+    text-align: center;
+    padding: 5vh 0;
+    font-size: 8vh;
+    font-weight: bold;
+    margin-bottom: 10vh;
+}
+
+
+.tools_div_text{
+    padding: 0 20vw;
+    margin-top: 20vh;
+}
+/*RWD，測試以360*780*/
+@media screen and (max-width: 600px) {
+    #title{
+        padding: 5vw 0;
+        font-size: 8vw;
+        margin-bottom: 10vw;
+    }
+    /*
+        .counter跟其html有改（inline-style）
+        #counter_img、#footer_text、#title也是
+    */
+    /*到這邊複製*/
+    .tools_div_text{
+        padding: 0 5vw;
+        margin-top: 10vw;
+    }
+    #rwd_tools_text{
+        font-size: 4vw !important;
+    }
+    h1{
+        font-size: 6vw !important;
+    }
+    /*到這邊是使用說明與注意事項*/
+    #main_div *{
+        font-size: 5vw;
+    }
+    button{
+        min-height: 6vh;
+    }
+    span:has(#width), span:has(#height), span:has(#sleepS){
+        width: 70%;
+    }
+    span:has(#randomLight){
+        width: 100%;
+    }
+}
