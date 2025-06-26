@@ -3,27 +3,3 @@
 <a href="../index.html" id="a_profile_smaller">
     <span id="profile_name_smaller">
         <img src="../assets/images/Yuuki_padoru_full.png" id="profile_picture_smaller" alt="個人資料相片">MR的小小天地</span></a> <!--點頭像可以回到首頁-->
-<!--選單-->
-<ul class="drop_down_menu"> <!--下拉式選單-->
-    <li onclick="location.href='./news.html';"><a href="./news.html">最新消息</a></li> <!--這邊的相對路徑記得注意-->
-    <li onclick="location.href='./history.html';"><a href="./history.html">歷史紀錄</a></li> <!--onclick讓整個li都變成超連結-->
-    <li onclick="location.href='./tools.html';"><a href="./tools.html">實用工具</a>
-        <ul> <!--用event.stopPropagation()防止DOM樹傳播訊息，最後導致載入外層(即上一層li)的連結-->
-            <li onclick="event.stopPropagation(); location.href='./tools.html';"><a href="./tools.html">總覽</a></li>
-            <li onclick="event.stopPropagation(); location.href='./calculator.html';"><a href="./calculator.html">計算機</a></li>
-            <li onclick="event.stopPropagation(); location.href='./timer.html';"><a href="./timer.html">倒數計時器</a></li>
-            <li onclick="event.stopPropagation(); location.href='./drawlots.html';"><a href="./drawlots.html">隨機抽籤</a></li>
-            <li onclick="event.stopPropagation(); location.href='./count.html';"><a href="./count.html">字數統計</a></li>
-            <li onclick="event.stopPropagation(); location.href='./count.html';"><a href="./imgprocess.html">圖片處理</a></li>
-        </ul>
-    </li>
-    <li onclick="location.href='./games.html';"><a href="./games.html">自製遊戲</a>
-        <ul> <!--用event.stopPropagation()防止DOM樹傳播訊息，最後導致載入外層(即上一層li)的連結-->
-            <li onclick="event.stopPropagation(); location.href='./games.html';"><a href="./games.html">總覽</a></li>
-            <li onclick="event.stopPropagation(); location.href='./bullandcow.html';"><a href="./bullandcow.html">1A2B</a></li>
-            <li onclick="event.stopPropagation(); location.href='./gameoflife.html';"><a href="./gameoflife.html">康威生命</a></li>
-        </ul>
-    </li>
-    <li onclick="location.href='./solution.html';"><a href="./solution.html">解題紀錄</a></li>
-    <li onclick="location.href='./collection.html';"><a href="./collection.html">其他作品</a></li>
-</ul>
